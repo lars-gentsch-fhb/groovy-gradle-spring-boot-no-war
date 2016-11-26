@@ -1,5 +1,5 @@
-FROM ubuntu:14.04
-MAINTAINER docker@fhb.de
+FROM ubuntu:16.04
+MAINTAINER docker@thb.de
 
 RUN sed 's/main$/main universe/' -i /etc/apt/sources.list
 RUN apt-get update && apt-get install -y software-properties-common python-software-properties
