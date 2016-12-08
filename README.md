@@ -1,11 +1,11 @@
-groovy-gradle-spring-boot-no-war [![Build Status](https://travis-ci.org/lars-gentsch-fhb/groovy-gradle-spring-boot-no-war.svg?branch=master)](https://travis-ci.org/lars-gentsch-fhb/groovy-gradle-spring-boot-no-war) [![Coverage Status](https://coveralls.io/repos/lars-gentsch-fhb/groovy-gradle-spring-boot-no-war/badge.svg?branch=master&service=github)](https://coveralls.io/github/lars-gentsch-fhb/groovy-gradle-spring-boot-no-war?branch=master)
+groovy-gradle-spring-boot-no-war [![Build Status](https://travis-ci.org/lars-gentsch-fhb/groovy-gradle-spring-boot-no-war.svg?branch=master)](https://travis-ci.org/lars-gentsch-fhb/groovy-gradle-spring-boot-no-war) [![Coverage Status](https://coveralls.io/repos/github/lars-gentsch-fhb/groovy-gradle-spring-boot-no-war/badge.svg?branch=master)](https://coveralls.io/github/lars-gentsch-fhb/groovy-gradle-spring-boot-no-war?branch=master)
 =========================
 
 
 Simple project to demonstrate Spring-Boot with Groovy and Gradle.
 
 The project has a component test phase. Spring Boot itself is started out of the tests.
-    
+
 $ gradle build
 
 Start the spring-boot app with: $ java -jar target/libs/groovy-gradle-spring-boot-no-war-1.0.jar
