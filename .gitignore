@@ -10,4 +10,4 @@ bin
 .settings
 .vagrant
 .nb-gradle
-
+gradlew.bat
