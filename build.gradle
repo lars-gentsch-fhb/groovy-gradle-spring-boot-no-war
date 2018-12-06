@@ -4,19 +4,20 @@ buildscript {
     }
     dependencies {
         classpath('org.springframework.boot:spring-boot-gradle-plugin:1.4.2.RELEASE')
-        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.4.0'
+        classpath "gradle.plugin.com.github.spotbugs:spotbugs-gradle-plugin:1.6.5"
     }
 }
 
 plugins {
-    id "net.saliman.cobertura" version "2.2.8"
+    id 'com.github.kt3k.coveralls' version '2.6.3'
+    id "com.github.spotbugs" version "1.6.5"
 }
 
 apply plugin: 'groovy'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'com.github.kt3k.coveralls'
 apply plugin: 'jacoco'
-apply plugin: 'findbugs'
+apply plugin: "com.github.spotbugs"
 
 configurations { providedRuntime }
 
@@ -78,14 +79,9 @@ check {
         'test',
         'componentTests',
         'jacocoTestReport',
-        'findbugsMain',
+        'spotbugsMain',
         'allTests'
     ]
-}
-
-cobertura {
-    coverageSourceDirs = sourceSets.main.groovy.srcDirs
-    coverageFormats = ['html', 'xml']
 }
 
 jacocoTestReport {
@@ -93,16 +89,5 @@ jacocoTestReport {
       xml.enabled = true
       html.enabled = true
       html.destination "${buildDir}/jacocoHtml"
-    }
-}
-
-findbugs {
-    findbugsTest.enabled=false
-}
-
-tasks.withType(FindBugs) {
-    reports {
-        xml.enabled = false
-        html.enabled = true
     }
 }
